@@ -36,6 +36,7 @@
 
 /* Begin PBXBuildFile section */
 		67CE6991D30842A08E451BDB /* ed25519_donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FD4C4F17AFF4C50B8E7D530 /* ed25519_donna.c */; settings = {COMPILER_FLAGS = " -I\"/Users/TuanNguyen/Working/ShizzleStudio/Ripple/src/unity/../../extras/rippled/src/secp256k1\" -I\"/Users/TuanNguyen/Working/ShizzleStudio/Ripple/src/unity/../../extras/rippled/src/ed25519-donna\""; }; };
+		AB3F03261F879775009A91B4 /* VPay365Wallet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3F03251F879774009A91B4 /* VPay365Wallet.cpp */; };
 		ABA4BB1A1F8775A50075B78A /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BB191F8775A50075B78A /* libboost_system.a */; };
 		ABA4BB1D1F8775B10075B78A /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BB1B1F8775B10075B78A /* libcrypto.a */; };
 		ABA4BB1E1F8775B10075B78A /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BB1C1F8775B10075B78A /* libssl.a */; };
@@ -1725,6 +1726,8 @@
 		AADC4BE149D347599A2B3433 /* InfoSub.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InfoSub.h; path = extras/rippled/src/ripple/net/InfoSub.h; sourceTree = SOURCE_ROOT; };
 		AB052C5417034485BE3823A1 /* EncodedBlob.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = EncodedBlob.h; path = extras/rippled/src/ripple/nodestore/impl/EncodedBlob.h; sourceTree = SOURCE_ROOT; };
 		AB1A564508EB43B3AF5FD1AE /* JsonFields.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = JsonFields.h; path = extras/rippled/src/ripple/protocol/JsonFields.h; sourceTree = SOURCE_ROOT; };
+		AB3F03251F879774009A91B4 /* VPay365Wallet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VPay365Wallet.cpp; path = "src/vpay365-provisioning/VPay365Wallet.cpp"; sourceTree = "<group>"; };
+		AB3F03271F879784009A91B4 /* VPay365Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPay365Wallet.h; path = "src/vpay365-provisioning/VPay365Wallet.h"; sourceTree = "<group>"; };
 		AB4269770DD94628AFBE347F /* plugin.pb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = plugin.pb.h; path = extras/rippled/src/protobuf/src/google/protobuf/compiler/plugin.pb.h; sourceTree = SOURCE_ROOT; };
 		AB6FD80CD7224F39B2B1634B /* histogram.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = histogram.h; path = extras/rippled/src/rocksdb2/util/histogram.h; sourceTree = SOURCE_ROOT; };
 		AB7D61B7A5D44AA6A6E406A1 /* version.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = version.hpp; path = extras/rippled/src/beast/include/beast/version.hpp; sourceTree = SOURCE_ROOT; };
@@ -5984,6 +5987,7 @@
 		8C13FA9FD44D4F099AEA35CB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				AB3F03241F87975F009A91B4 /* VPay */,
 				ABB836191F8732760060F869 /* ios */,
 				3D5C0C2B539E4E3FA35CA856 /* test */,
 			);
@@ -6660,6 +6664,15 @@
 				3C96DE2FEE4D46A7B231F8DC /* backends */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		AB3F03241F87975F009A91B4 /* VPay */ = {
+			isa = PBXGroup;
+			children = (
+				AB3F03271F879784009A91B4 /* VPay365Wallet.h */,
+				AB3F03251F879774009A91B4 /* VPay365Wallet.cpp */,
+			);
+			name = VPay;
 			sourceTree = "<group>";
 		};
 		ABAA03DDC2A945A49316A7E6 /* nudb */ = {
@@ -8307,6 +8320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB8362E1F8736A80060F869 /* AppDelegate.m in Sources */,
+				AB3F03261F879775009A91B4 /* VPay365Wallet.cpp in Sources */,
 				ABB8362F1F8736A80060F869 /* ViewController.m in Sources */,
 				D3C14FD6300745FD9D6B08C5 /* ripple-libpp_demo.cpp in Sources */,
 			);
@@ -8441,6 +8455,7 @@
 					"\"$(SRCROOT)/src/test/ios\"",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/openssl-ios/include\"",
+					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/src/test/ios/info.plist";
 				INSTALL_PATH = "";
@@ -8979,6 +8994,7 @@
 					"\"$(SRCROOT)/src/test/ios\"",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/openssl-ios/include\"",
+					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/src/test/ios/info.plist";
 				INSTALL_PATH = "";

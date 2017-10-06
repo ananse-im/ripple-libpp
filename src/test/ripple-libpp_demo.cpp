@@ -29,7 +29,7 @@
 #include <ripple-libpp/version.hpp>
 #include <boost/version.hpp>
 #include <algorithm>
-
+#include "VPay365Wallet.h"
 
 std::string serialize(ripple::STTx const& tx)
 {

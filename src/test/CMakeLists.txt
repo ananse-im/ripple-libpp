@@ -1,4 +1,5 @@
 # cmake file for ripplelibppdemo
+cmake_minimum_required(VERSION 3.8)
 
 list(APPEND CMAKE_MODULE_PATH
   "${CMAKE_CURRENT_SOURCE_DIR}/../../extras/rippled/Builds/CMake")
@@ -34,14 +35,14 @@ special_build_flags()
 
 ############################################################
 
-use_boost(
-  regex
-  system
-  thread)
+#use_boost(
+#  regex
+#  system
+#  thread)
 
 use_pthread()
 
-use_openssl(${openssl_min})
+#use_openssl(${openssl_min})
 
 setup_build_boilerplate()
 
@@ -86,6 +87,7 @@ endif()
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
+MESSAGE( STATUS "TARGET_OBJECTS:         " ${TARGET_OBJECTS} )
 add_executable(ripplelibppdemo
     ${demo_src}
     $<TARGET_OBJECTS:ripplelibpp>)

@@ -9,6 +9,9 @@
 
 cmake_minimum_required(VERSION 3.1.0)
 
+# if you are building in-source, this is the same as CMAKE_SOURCE_DIR, otherwise 
+# this is the top level directory of your build tree 
+MESSAGE( STATUS "CMAKE_MODULE_PATH:         " ${CMAKE_CURRENT_SOURCE_DIR} )
 list(APPEND CMAKE_MODULE_PATH
   "${CMAKE_CURRENT_SOURCE_DIR}/../../extras/rippled/Builds/CMake")
 include(CMakeFuncs)
@@ -21,12 +24,12 @@ include_directories(
 
 determine_build_type()
 
-use_boost(
-  regex
-  system
-  thread)
+#use_boost(
+#  regex
+#  system
+#  thread)
 
-use_openssl(1.0.1)
+#use_openssl(1.0.1)
 
 setup_build_boilerplate()
 

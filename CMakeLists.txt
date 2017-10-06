@@ -53,6 +53,14 @@ project(ripple-libpp)
 
 add_subdirectory(src/unity)
 
+# Include paths
+include_directories(
+    SYSTEM
+	extras/ripple-libpp/extras/rippled/src
+	extras/ripple-libpp/extras/rippled/src/beast/include
+	extras/ripple-libpp/extras/rippled/src/beast/extras
+)
+
 ############################################################
 
 add_subdirectory(src/test)

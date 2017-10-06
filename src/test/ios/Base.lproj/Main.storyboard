@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LCu-va-YWC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="LMq-oX-xZm">
+            <objects>
+                <viewController id="LCu-va-YWC" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cmB-c1-7yW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mPM-XV-1I5">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mPM-XV-1I5" firstAttribute="centerX" secondItem="EOK-4W-BrQ" secondAttribute="centerX" id="1k7-3t-ARE"/>
+                            <constraint firstItem="mPM-XV-1I5" firstAttribute="centerY" secondItem="EOK-4W-BrQ" secondAttribute="centerY" id="7cH-ia-jYB"/>
+                            <constraint firstItem="mPM-XV-1I5" firstAttribute="height" secondItem="cmB-c1-7yW" secondAttribute="height" id="Mjo-Eb-LHI"/>
+                            <constraint firstItem="mPM-XV-1I5" firstAttribute="width" secondItem="cmB-c1-7yW" secondAttribute="width" id="PlY-BQ-RZI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EOK-4W-BrQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="mPM-XV-1I5" id="bEv-Fk-bhf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ki5-x4-9Hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="60"/>
+        </scene>
+    </scenes>
+</document>

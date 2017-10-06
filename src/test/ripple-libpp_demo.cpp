@@ -332,35 +332,45 @@ bool exerciseMultiSign()
 }
 
 //------------------------------------------------------------------------------
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#include "ripple-libpp_demo.h"
 
-int main (int argc, char** argv)
+char* run(void)
 {
 #if defined(__GNUC__) && !defined(__clang__)
     auto constexpr gccver = (__GNUC__ * 100 * 100) +
-                            (__GNUC_MINOR__ * 100) +
-                            __GNUC_PATCHLEVEL__;
-
+    (__GNUC_MINOR__ * 100) +
+    __GNUC_PATCHLEVEL__;
+    
     static_assert (gccver >= 50100,
-        "GCC version 5.1.0 or later is required to compile rippled.");
+                   "GCC version 5.1.0 or later is required to compile rippled.");
 #endif
-
+    
     static_assert (BOOST_VERSION >= 105700,
-        "Boost version 1.57 or later is required to compile rippled");
-
+                   "Boost version 1.57 or later is required to compile rippled");
+    
     // Display the version
     std::cout << "ripple-libpp_demo version " <<
-        RIPPLE_LIBPP_VERSION_STRING << "\n";
-
+    RIPPLE_LIBPP_VERSION_STRING << "\n";
+    
     // Demonstrate single signing.
     auto allPass = exerciseSingleSign();
-
+    
     // Demonstrate multisigning.
     allPass &= exerciseMultiSign();
-
+    
     assert(allPass);
-    std::cout << (allPass ?
-        "All checks pass.\n" : "Some checks fail.\n");
+    const char* result = (allPass ?
+            "All checks pass.\n" : "Some checks fail.\n");
+    return const_cast<char*>(result);
+}
 
-    return allPass ? 0 : 1;
+
+int main (int argc, char** argv)
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
 }
 

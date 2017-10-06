@@ -1,0 +1,4 @@
+/Users/TuanNguyen/Working/ShizzleStudio/Ripple/build2/CMakeFiles/ALL_BUILD.dir
+/Users/TuanNguyen/Working/ShizzleStudio/Ripple/build2/CMakeFiles/ZERO_CHECK.dir
+/Users/TuanNguyen/Working/ShizzleStudio/Ripple/build2/src/unity/CMakeFiles/ripplelibpp.dir
+/Users/TuanNguyen/Working/ShizzleStudio/Ripple/build2/src/test/CMakeFiles/ripplelibppdemo.dir

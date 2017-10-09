@@ -17,8 +17,8 @@
 		AB943A041F8B508A0020666E /* ripple-libpp_demo.h in Sources */ = {isa = PBXBuildFile; fileRef = AB9439FC1F8B4F910020666E /* ripple-libpp_demo.h */; };
 		AB943A0F1F8B54B70020666E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9439FD1F8B4F910020666E /* Main.storyboard */; };
 		AB943A101F8B56770020666E /* libripplelibpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F4D21259904896B2991A64 /* libripplelibpp.a */; };
-		B9312273572E49458828EE1C /* ripple-libpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5161C0732F104F7BBDFF2343 /* ripple-libpp.cpp */; settings = {COMPILER_FLAGS = " -I\"/Users/TuanNguyen/Working/ShizzleStudio/Ripple/src/unity/../../extras/rippled/src/secp256k1\""; }; };
-		C3AF2D20138F4E0194978B7C /* ed25519_donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C832152D29A40A5B296B1A2 /* ed25519_donna.c */; settings = {COMPILER_FLAGS = " -I\"/Users/TuanNguyen/Working/ShizzleStudio/Ripple/src/unity/../../extras/rippled/src/secp256k1\" -I\"/Users/TuanNguyen/Working/ShizzleStudio/Ripple/src/unity/../../extras/rippled/src/ed25519-donna\""; }; };
+		B9312273572E49458828EE1C /* ripple-libpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5161C0732F104F7BBDFF2343 /* ripple-libpp.cpp */; settings = {COMPILER_FLAGS = " -I\"$(SRCROOT)/src/unity/../../extras/rippled/src/secp256k1\""; }; };
+		C3AF2D20138F4E0194978B7C /* ed25519_donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C832152D29A40A5B296B1A2 /* ed25519_donna.c */; settings = {COMPILER_FLAGS = " -I\"$(SRCROOT)/src/unity/../../extras/rippled/src/secp256k1\" -I\"$(SRCROOT)/src/unity/../../extras/rippled/src/ed25519-donna\""; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

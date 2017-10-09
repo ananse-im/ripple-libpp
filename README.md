@@ -24,6 +24,7 @@ nor needing to run your own rippled.
   * [Rippled submodule](#rippled-submodule)
   * [Other dependencies](#other-dependencies)
 * [Installation](#installation)
+* [iOS] (#iOS-library)
 * [Demo](#demo)
   * [Additional dependencies](#additional-dependencies)
   * [Build and run](#build-and-run)
@@ -106,6 +107,18 @@ CMake project installation example:
 	target_link_libraries(${YOUR_APP_NAME} ${OPENSSL_LIBRARIES})
 	...
 	```
+	
+## iOS library
+
+The XCode project file located in `build2/ripple-libpp.xcodeproj`. It contains 2 main target, the `ripplelibpp` and `ripplelibppdemo`. 
+
+* The `ripplelibppdemo` executes all test suites of the `ripplelipp` on iOS simulators and devices. Run the target and it should show "All checks pass" on the screen. If any test fail, please contact [ananse](help@ananse.im).
+* The `ripplelibpp` is a static library for iOS. Below is instructions to integrate with Swift project
+
+	1. Add `ripple-libpp.xcodeproj` into your project. In build phase tab, add `ripplelibpp` as the dependency. In Link Binary With Libraries, add `ripplelibpp`.
+	2. In build settings, add the path to `vpay365-provisioning` into header search path.
+	3. In the umbrella or bridging header, add `import VPay365Wallet.h`.
+
 
 ## Demo
 

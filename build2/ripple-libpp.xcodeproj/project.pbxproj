@@ -11,6 +11,15 @@
 		AB2650BA1F8B5D44001E5DF8 /* VPay365Wallet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB2650B91F8B5D44001E5DF8 /* VPay365Wallet.cpp */; };
 		AB2650BB1F8B5D91001E5DF8 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9439EE1F8B3A850020666E /* libcrypto.a */; };
 		AB2650BC1F8B5E5D001E5DF8 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9439F11F8B3A990020666E /* libboost_system.a */; };
+		AB2650C01F8B8958001E5DF8 /* secp256k1.h in Headers */ = {isa = PBXBuildFile; fileRef = 32778FF046CC476D88C3F241 /* secp256k1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650C31F8B89F0001E5DF8 /* Seed.h in Headers */ = {isa = PBXBuildFile; fileRef = D7665732F26347FA83BF7D2F /* Seed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650C41F8B89F9001E5DF8 /* SecretKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA1D34F026F4F6F9B90B967 /* SecretKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650C51F8B89FE001E5DF8 /* tokens.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2B46DE67FF4522992A93DA /* tokens.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650C61F8B8A12001E5DF8 /* KeyType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9373D9E3374E16AEDD4E51 /* KeyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650C71F8B8A22001E5DF8 /* strHex.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FE6540A35C4E1C9FDEE063 /* strHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650C81F8B8A29001E5DF8 /* Slice.h in Headers */ = {isa = PBXBuildFile; fileRef = 133357243EB34FCC94AE1D98 /* Slice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650C91F8B8A6D001E5DF8 /* to_string.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 609F5118B74E472199E33843 /* to_string.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650CA1F8B8A74001E5DF8 /* base64.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9555AF73E41D4D8A9BFFCD2D /* base64.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9439EB1F8B3A720020666E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9439EA1F8B3A720020666E /* libssl.a */; };
 		AB943A021F8B4F920020666E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9439FB1F8B4F910020666E /* ViewController.m */; };
 		AB943A031F8B4F920020666E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9439FF1F8B4F910020666E /* AppDelegate.m */; };
@@ -10626,6 +10635,25 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AB2650BF1F8B88B1001E5DF8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB2650CA1F8B8A74001E5DF8 /* base64.hpp in Headers */,
+				AB2650C01F8B8958001E5DF8 /* secp256k1.h in Headers */,
+				AB2650C91F8B8A6D001E5DF8 /* to_string.hpp in Headers */,
+				AB2650C81F8B8A29001E5DF8 /* Slice.h in Headers */,
+				AB2650C71F8B8A22001E5DF8 /* strHex.h in Headers */,
+				AB2650C31F8B89F0001E5DF8 /* Seed.h in Headers */,
+				AB2650C61F8B8A12001E5DF8 /* KeyType.h in Headers */,
+				AB2650C41F8B89F9001E5DF8 /* SecretKey.h in Headers */,
+				AB2650C51F8B89FE001E5DF8 /* tokens.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		33FBF9E70C6A40478641049F /* ripplelibpp */ = {
 			isa = PBXNativeTarget;
@@ -10633,6 +10661,7 @@
 			buildPhases = (
 				B20A045164A94000B93750E4 /* Sources */,
 				AB9439E81F8B3A640020666E /* Frameworks */,
+				AB2650BF1F8B88B1001E5DF8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -10917,13 +10946,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/extras/ripple-libpp/extras/rippled/src",
-					"$(SRCROOT)/extras/ripple-libpp/extras/rippled/src/beast/include",
-					"$(SRCROOT)/extras/ripple-libpp/extras/rippled/src/beast/extras",
-					"$(SRCROOT)/src/test/../../extras/rippled/src",
-					"$(SRCROOT)/src/test/../../extras/rippled/src/beast/include",
-					"$(SRCROOT)/src/test/../../extras/rippled/src/beast/extras",
-					"$(SRCROOT)/src/test/../../src/include",
+					/usr/local/include,
 					"\"$(SRCROOT)/openssl-ios/include\"",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/src/vpay365-provisioning\"",
@@ -11106,13 +11129,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/extras/ripple-libpp/extras/rippled/src",
-					"$(SRCROOT)/extras/ripple-libpp/extras/rippled/src/beast/include",
-					"$(SRCROOT)/extras/ripple-libpp/extras/rippled/src/beast/extras",
-					"$(SRCROOT)/src/test/../../extras/rippled/src",
-					"$(SRCROOT)/src/test/../../extras/rippled/src/beast/include",
-					"$(SRCROOT)/src/test/../../extras/rippled/src/beast/extras",
-					"$(SRCROOT)/src/test/../../src/include",
+					/usr/local/include,
 					"\"$(SRCROOT)/openssl-ios/include\"",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/src/vpay365-provisioning\"",

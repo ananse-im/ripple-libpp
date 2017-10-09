@@ -24,7 +24,7 @@ nor needing to run your own rippled.
   * [Rippled submodule](#rippled-submodule)
   * [Other dependencies](#other-dependencies)
 * [Installation](#installation)
-* [iOS] (#iOS-library)
+* [iOS] (#ios-library)
 * [Demo](#demo)
   * [Additional dependencies](#additional-dependencies)
   * [Build and run](#build-and-run)

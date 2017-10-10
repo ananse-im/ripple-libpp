@@ -110,6 +110,8 @@ CMake project installation example:
 	
 ## iOS library
 
+**The library doesn't support swift.**
+
 The XCode project file located in `build2/ripple-libpp.xcodeproj`. It contains 2 main target, the `ripplelibpp` and `ripplelibppdemo`. 
 
 * The `ripplelibppdemo` executes all test suites of the `ripplelipp` on iOS simulators and devices. Run the target and it should show "All checks pass" on the screen. If any test fail, please contact [ananse](help@ananse.im).
@@ -119,7 +121,7 @@ The XCode project file located in `build2/ripple-libpp.xcodeproj`. It contains 2
 
 	2. Add `ripple-libpp.xcodeproj` into your project. In build phase tab, add `ripplelibpp` as the dependency. In Link Binary With Libraries, add `ripplelibpp`.
 	3. Header files are installed at `build2/ripple-libpp.build/$(CONFIGURATION)/incldue/ripplelibpp`. In header search path, add link to that header files.
-	4. In the umbrella or bridging header, add `import VPay365Wallet.h`.
+	4. Add `import VPay365Wallet.h`where you need to use the library.
 
 
 ## Demo

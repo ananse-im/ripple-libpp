@@ -115,9 +115,11 @@ The XCode project file located in `build2/ripple-libpp.xcodeproj`. It contains 2
 * The `ripplelibppdemo` executes all test suites of the `ripplelipp` on iOS simulators and devices. Run the target and it should show "All checks pass" on the screen. If any test fail, please contact [ananse](help@ananse.im).
 * The `ripplelibpp` is a static library for iOS. Below is instructions to integrate with Swift project
 
-	1. Add `ripple-libpp.xcodeproj` into your project. In build phase tab, add `ripplelibpp` as the dependency. In Link Binary With Libraries, add `ripplelibpp`.
-	2. In build settings, add the path to `vpay365-provisioning` into header search path.
-	3. In the umbrella or bridging header, add `import VPay365Wallet.h`.
+	1. Make sure to run `git pull --recurse-submodules` to pull all the submodules. Also please verify the submodule `extras/rippled` is using `vpay365` branch.
+
+	2. Add `ripple-libpp.xcodeproj` into your project. In build phase tab, add `ripplelibpp` as the dependency. In Link Binary With Libraries, add `ripplelibpp`.
+	3. Header files are installed at `build2/ripple-libpp.build/$(CONFIGURATION)/incldue/ripplelibpp`. In header search path, add link to that header files.
+	4. In the umbrella or bridging header, add `import VPay365Wallet.h`.
 
 
 ## Demo

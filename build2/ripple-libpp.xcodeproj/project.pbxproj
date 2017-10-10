@@ -14,6 +14,7 @@
 		AB2650D91F8C7348001E5DF8 /* SecretKey.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1EA1D34F026F4F6F9B90B967 /* SecretKey.h */; };
 		AB2650DA1F8C7350001E5DF8 /* tokens.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB2B46DE67FF4522992A93DA /* tokens.h */; };
 		AB2650DB1F8C7367001E5DF8 /* PublicKey.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33C94381BA2842C287EC5A80 /* PublicKey.h */; };
+		AB2650E01F8C765E001E5DF8 /* VPay365Wallet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB2650B81F8B5D44001E5DF8 /* VPay365Wallet.h */; };
 		AB9439EB1F8B3A720020666E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9439EA1F8B3A720020666E /* libssl.a */; };
 		AB943A021F8B4F920020666E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9439FB1F8B4F910020666E /* ViewController.m */; };
 		AB943A031F8B4F920020666E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9439FF1F8B4F910020666E /* AppDelegate.m */; };
@@ -41,6 +42,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				AB2650E01F8C765E001E5DF8 /* VPay365Wallet.h in CopyFiles */,
 				AB2650DA1F8C7350001E5DF8 /* tokens.h in CopyFiles */,
 				AB2650D91F8C7348001E5DF8 /* SecretKey.h in CopyFiles */,
 				AB2650DB1F8C7367001E5DF8 /* PublicKey.h in CopyFiles */,

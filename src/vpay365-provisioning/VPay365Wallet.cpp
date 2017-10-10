@@ -3,6 +3,15 @@
 //
 
 #include "VPay365Wallet.h"
+#include <secp256k1/include/secp256k1.h>
+#include <ripple/protocol/Seed.h>
+#include <ripple/protocol/tokens.h>
+#include <ripple/protocol/SecretKey.h>
+#include <ripple/crypto/KeyType.h>
+#include <ripple/basics/strHex.h>
+#include <ripple/basics/Slice.h>
+#include <beast/core/to_string.hpp>
+#include <beast/core/detail/base64.hpp>
 
 namespace ripple {
 

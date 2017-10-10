@@ -11,15 +11,9 @@
 		AB2650BA1F8B5D44001E5DF8 /* VPay365Wallet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB2650B91F8B5D44001E5DF8 /* VPay365Wallet.cpp */; };
 		AB2650BB1F8B5D91001E5DF8 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9439EE1F8B3A850020666E /* libcrypto.a */; };
 		AB2650BC1F8B5E5D001E5DF8 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9439F11F8B3A990020666E /* libboost_system.a */; };
-		AB2650C01F8B8958001E5DF8 /* secp256k1.h in Headers */ = {isa = PBXBuildFile; fileRef = 32778FF046CC476D88C3F241 /* secp256k1.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650C31F8B89F0001E5DF8 /* Seed.h in Headers */ = {isa = PBXBuildFile; fileRef = D7665732F26347FA83BF7D2F /* Seed.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650C41F8B89F9001E5DF8 /* SecretKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA1D34F026F4F6F9B90B967 /* SecretKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650C51F8B89FE001E5DF8 /* tokens.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2B46DE67FF4522992A93DA /* tokens.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650C61F8B8A12001E5DF8 /* KeyType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9373D9E3374E16AEDD4E51 /* KeyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650C71F8B8A22001E5DF8 /* strHex.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FE6540A35C4E1C9FDEE063 /* strHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650C81F8B8A29001E5DF8 /* Slice.h in Headers */ = {isa = PBXBuildFile; fileRef = 133357243EB34FCC94AE1D98 /* Slice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650C91F8B8A6D001E5DF8 /* to_string.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 609F5118B74E472199E33843 /* to_string.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB2650CA1F8B8A74001E5DF8 /* base64.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9555AF73E41D4D8A9BFFCD2D /* base64.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB2650D91F8C7348001E5DF8 /* SecretKey.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1EA1D34F026F4F6F9B90B967 /* SecretKey.h */; };
+		AB2650DA1F8C7350001E5DF8 /* tokens.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB2B46DE67FF4522992A93DA /* tokens.h */; };
+		AB2650DB1F8C7367001E5DF8 /* PublicKey.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33C94381BA2842C287EC5A80 /* PublicKey.h */; };
 		AB9439EB1F8B3A720020666E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9439EA1F8B3A720020666E /* libssl.a */; };
 		AB943A021F8B4F920020666E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9439FB1F8B4F910020666E /* ViewController.m */; };
 		AB943A031F8B4F920020666E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9439FF1F8B4F910020666E /* AppDelegate.m */; };
@@ -39,6 +33,21 @@
 			remoteInfo = ripplelibpp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB2650D81F8C7149001E5DF8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				AB2650DA1F8C7350001E5DF8 /* tokens.h in CopyFiles */,
+				AB2650D91F8C7348001E5DF8 /* SecretKey.h in CopyFiles */,
+				AB2650DB1F8C7367001E5DF8 /* PublicKey.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		000304643485488CB7182718 /* iterator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iterator.h; path = extras/rippled/src/rocksdb2/include/rocksdb/iterator.h; sourceTree = SOURCE_ROOT; };
@@ -2129,6 +2138,9 @@
 		AB14EAF1AC90495EA04A6AB2 /* types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = types.h; path = extras/rippled/src/rocksdb2/include/rocksdb/types.h; sourceTree = SOURCE_ROOT; };
 		AB2650B81F8B5D44001E5DF8 /* VPay365Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPay365Wallet.h; sourceTree = "<group>"; };
 		AB2650B91F8B5D44001E5DF8 /* VPay365Wallet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VPay365Wallet.cpp; sourceTree = "<group>"; };
+		AB2650CC1F8B8CC0001E5DF8 /* secp256k1_ecdh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secp256k1_ecdh.h; sourceTree = "<group>"; };
+		AB2650CD1F8B8CC0001E5DF8 /* secp256k1_recovery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secp256k1_recovery.h; sourceTree = "<group>"; };
+		AB2650CE1F8B8CC0001E5DF8 /* secp256k1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secp256k1.h; sourceTree = "<group>"; };
 		AB36B33AF74A4125BD904E7D /* package_info.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = package_info.h; path = extras/rippled/src/protobuf/src/google/protobuf/compiler/package_info.h; sourceTree = SOURCE_ROOT; };
 		AB6D2EF5AFDB4D4B945455DD /* redis_lists.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = redis_lists.h; path = extras/rippled/src/rocksdb2/utilities/redis/redis_lists.h; sourceTree = SOURCE_ROOT; };
 		AB9439EA1F8B3A720020666E /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "openssl-ios/lib/libssl.a"; sourceTree = "<group>"; };
@@ -3789,6 +3801,7 @@
 		11F4F121396E4851AA6A85F6 = {
 			isa = PBXGroup;
 			children = (
+				AB2650CB1F8B8CC0001E5DF8 /* include */,
 				6CA4AE35B8BE41CD9EF7D5C5 /* Sources */,
 				A5EBD6366CCA478796BCF335 /* Resources */,
 				853818F80F0C451183E3CA84 /* Products */,
@@ -8345,6 +8358,17 @@
 			path = "src/vpay365-provisioning";
 			sourceTree = "<group>";
 		};
+		AB2650CB1F8B8CC0001E5DF8 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AB2650CC1F8B8CC0001E5DF8 /* secp256k1_ecdh.h */,
+				AB2650CD1F8B8CC0001E5DF8 /* secp256k1_recovery.h */,
+				AB2650CE1F8B8CC0001E5DF8 /* secp256k1.h */,
+			);
+			name = include;
+			path = extras/rippled/src/secp256k1/include;
+			sourceTree = "<group>";
+		};
 		AB34F85DBD7A4F8C809C50F0 /* basics */ = {
 			isa = PBXGroup;
 			children = (
@@ -10635,25 +10659,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		AB2650BF1F8B88B1001E5DF8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB2650CA1F8B8A74001E5DF8 /* base64.hpp in Headers */,
-				AB2650C01F8B8958001E5DF8 /* secp256k1.h in Headers */,
-				AB2650C91F8B8A6D001E5DF8 /* to_string.hpp in Headers */,
-				AB2650C81F8B8A29001E5DF8 /* Slice.h in Headers */,
-				AB2650C71F8B8A22001E5DF8 /* strHex.h in Headers */,
-				AB2650C31F8B89F0001E5DF8 /* Seed.h in Headers */,
-				AB2650C61F8B8A12001E5DF8 /* KeyType.h in Headers */,
-				AB2650C41F8B89F9001E5DF8 /* SecretKey.h in Headers */,
-				AB2650C51F8B89FE001E5DF8 /* tokens.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		33FBF9E70C6A40478641049F /* ripplelibpp */ = {
 			isa = PBXNativeTarget;
@@ -10661,7 +10666,7 @@
 			buildPhases = (
 				B20A045164A94000B93750E4 /* Sources */,
 				AB9439E81F8B3A640020666E /* Frameworks */,
-				AB2650BF1F8B88B1001E5DF8 /* Headers */,
+				AB2650D81F8C7149001E5DF8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -10806,6 +10811,7 @@
 					"$(SRCROOT)/src/unity/../../extras/rippled/src/beast/extras",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/openssl-ios/include\"",
+					"\"$(SRCROOT)/extras/rippled/src/ripple/protocol\"",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (
@@ -10946,11 +10952,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
+					/include/ripplelibpp,
 					"\"$(SRCROOT)/openssl-ios/include\"",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 					"\"$(SRCROOT)/src/test/ios\"",
+					"\"$(SRCROOT)/build2/ripple-libpp.build/$(CONFIGURATION)/include/ripplelibpp\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/src/test/ios/info.plist";
 				INSTALL_PATH = "";
@@ -11129,11 +11136,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
+					/include/ripplelibpp,
 					"\"$(SRCROOT)/openssl-ios/include\"",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 					"\"$(SRCROOT)/src/test/ios\"",
+					"\"$(SRCROOT)/build2/ripple-libpp.build/$(CONFIGURATION)/include/ripplelibpp\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/src/test/ios/info.plist";
 				INSTALL_PATH = "";
@@ -11307,6 +11315,7 @@
 					"$(SRCROOT)/src/unity/../../extras/rippled/src/beast/extras",
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/openssl-ios/include\"",
+					"\"$(SRCROOT)/extras/rippled/src/ripple/protocol\"",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (

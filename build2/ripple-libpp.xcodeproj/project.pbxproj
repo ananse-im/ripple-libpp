@@ -10760,7 +10760,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\ncp -r ${SRCROOT}/src/unity/../../extras/rippled/src/ripple ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\ncp -r ${SRCROOT}/boost-ios/include ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\ncp -r ${SRCROOT}/openssl-ios/include ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\n";
+			shellScript = "mkdir -p ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\ncp -r ${SRCROOT}/src/unity/../../extras/rippled/src/ripple ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\ncp -r ${SRCROOT}/boost-ios/include/boost ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\ncp -r ${SRCROOT}/openssl-ios/include/openssl ${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -120,8 +120,9 @@ The XCode project file located in `build2/ripple-libpp.xcodeproj`. It contains 2
 	1. Make sure to run `git pull --recurse-submodules` to pull all the submodules. Also please verify the submodule `extras/rippled` is using `vpay365` branch.
 
 	2. Add `ripple-libpp.xcodeproj` into your project. In build phase tab, add `ripplelibpp` as the dependency. In Link Binary With Libraries, add `ripplelibpp`.
-	3. Header files are installed at `build2/ripple-libpp.build/$(CONFIGURATION)/incldue/ripplelibpp`. In header search path, add link to that header files.
-	4. Add `import VPay365Wallet.h`where you need to use the library.
+	3. Add `-std=c++14` in other C++ flags.
+	4. Header files are installed at `build2/ripple-libpp.build/$(CONFIGURATION)/incldue/ripplelibpp`. In header search path, add link to that header files.
+	5. Add `import VPay365Wallet.h`where you need to use the library.
 
 
 ## Demo

@@ -5,9 +5,9 @@
 #ifndef RIPPLE_LIBPP_VPAY365WALLET_H
 #define RIPPLE_LIBPP_VPAY365WALLET_H
 
-#include <PublicKey.h>
-#include <SecretKey.h>
-#include <tokens.h>
+#include <ripple/protocol/PublicKey.h>
+#include <ripple/protocol/SecretKey.h>
+#include <ripple/protocol/tokens.h>
 
 #include <sys/time.h>
 #include <string>

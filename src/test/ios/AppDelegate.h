@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#include <type_traits>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

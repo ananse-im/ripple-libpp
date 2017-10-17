@@ -62,7 +62,7 @@ namespace ripple {
 
     std::string VPay365Wallet::getProvisioningRequest (std::string telnumber) {
         unsigned long timestamp = time(NULL)*1000; // so what!
-        std::string messagetosign = address+telnumber+std::to_string(timestamp)+getPublicKey();
+        std::string messagetosign = address+telnumber+std::to_string(timestamp);
         std::string signature = signMessage(messagetosign);
         return "{\"address\":\""+address+"\",\"telnumber\":\""+telnumber+"\",\"timestamp\":"+std::to_string(timestamp)+",\"pubkey\":\""+getPublicKey()+"\",\"signature\":\""+signature+"\"}";
     }

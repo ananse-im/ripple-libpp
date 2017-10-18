@@ -83,6 +83,11 @@ add_with_props(lib_src ripple-libpp.cpp
   ${no_unused_w}
   )
 
+add_with_props(lib_src  ${CMAKE_CURRENT_SOURCE_DIR}/../vpay365-provisioning/VPay365Wallet.cpp
+         -I"${CMAKE_CURRENT_SOURCE_DIR}/../vpay365-provisioning"
+        ${no_unused_w}
+        )
+
 add_with_props(lib_src ../../extras/rippled/src/ripple/unity/ed25519_donna.c
   -I"${CMAKE_CURRENT_SOURCE_DIR}/../../extras/rippled/src/ed25519-donna")
 

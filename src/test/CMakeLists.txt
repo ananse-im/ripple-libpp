@@ -28,7 +28,8 @@ include_directories(
   ../../extras/rippled/src
   ../../extras/rippled/src/beast/include
   ../../extras/rippled/src/beast/extras
-  ../../src/include)
+  ../../src/include
+  ../../src/vpay365-provisioning)
 
 special_build_flags()
 

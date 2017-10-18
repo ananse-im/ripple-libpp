@@ -334,6 +334,33 @@ bool exerciseMultiSign()
 
 
 
+bool exerciseRandomVPay365Wallet()
+{
+    using namespace ripple;
+
+
+    VPay365Wallet wallet = VPay365Wallet();
+    std::string secret= wallet.getSecretfromString("12314545");
+    wallet = VPay365Wallet(secret);
+
+    assert (wallet.address=="rP4PMsiHKHnt3kQgWQKgAaWQj27F6Kiv6S");
+    assert (wallet.verifyAddress("rP4PMsiHKHnt3kQgWQKgAaWQj27F6Kiv6S")==true);
+    assert (wallet.verifyAddress("rP4PMsiHKHnt3kQgWQKgAaWQjd27F6Kiv6S")==false);
+
+    auto signature = wallet.signMessage("This is a message to sign");
+    assert(wallet.verifyMessage("This is a message to sign", signature)==true);
+
+    std::cout << "Provisioning request: "<<wallet.getProvisioningRequest("+447709618382") << std::endl;
+    std::cout << "Provisioning reply: "<<wallet.getProvisioningReply("012345") << std::endl;
+    std::cout << "Withdrawal request: "<<wallet.getWithdrawalRequest("CNY","Bank of china","123123123","Leeroy jeeenkins","1239847109347193",10000) << std::endl;
+    std::cout << "Topup request: "<<wallet.getTopupRequest("CNY",10000) << std::endl;
+    std::cout << "Pushtoken request: "<<wallet.getPushTokenRequest("234233445egshdrg") << std::endl;
+    std::cout << "Bitcoin generation request: "<<wallet.getBitcoinGenerationRequest() << std::endl;
+
+    return true;
+}
+
+
 bool exerciseVPay365Wallet()
 {
     using namespace ripple;
@@ -386,6 +413,8 @@ int main (int argc, char** argv)
 
     // Demonstrate VPay365 Provisioning
     allPass &= exerciseVPay365Wallet();
+
+    allPass &= exerciseRandomVPay365Wallet();
 
     assert(allPass);
     std::cout << (allPass ?

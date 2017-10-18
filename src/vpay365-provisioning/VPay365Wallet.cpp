@@ -15,12 +15,24 @@
 
 namespace ripple {
 
-    VPay365Wallet::VPay365Wallet(std::string secret) {
-        boost::optional<Seed> seed = parseGenericSeed(secret);
+
+    VPay365Wallet::VPay365Wallet() {
+    }
+
+
+    VPay365Wallet::VPay365Wallet(std::string secretin) {
+        boost::optional<Seed> seed = parseGenericSeed(secretin);
+        secret = secretin;
         keypair = generateKeyPair(KeyType::secp256k1, *seed);
         publickey = strHex(keypair.first.data(),(int)keypair.first.size());
         address = toBase58(calcAccountID(keypair.first));
     }
+
+    std::string VPay365Wallet::getSecretfromString(std::string randomstring){
+        boost::optional<Seed> seed = generateSeed(randomstring);
+        return ripple::toBase58(*seed);
+    }
+
 
     // returns base58 address
     std::string VPay365Wallet::getAddressfromPubKey (PublicKey pubkey) {

@@ -23,8 +23,10 @@ namespace ripple {
 
 
     public:
+        VPay365Wallet();
         VPay365Wallet(std::string secret);
         std::string getAddressfromPubKey(PublicKey pubkey);
+        std::string getSecretfromString(std::string randomstring);
         std::string getPublicKey();
         bool verifyAddress(std::string address);
         std::string signMessage(std::string message);

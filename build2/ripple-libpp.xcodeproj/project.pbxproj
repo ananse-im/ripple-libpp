@@ -10837,6 +10837,7 @@
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/openssl-ios/include\"",
 					"\"$(SRCROOT)/extras/rippled/src/ripple/protocol\"",
+					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (
@@ -10982,6 +10983,7 @@
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/build2/ripple-libpp.build/$(CONFIGURATION)/include/ripplelibpp\"",
 					"\"$(SRCROOT)/src/test/ios\"",
+					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/src/test/ios/info.plist";
 				INSTALL_PATH = "";
@@ -11165,6 +11167,7 @@
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/build2/ripple-libpp.build/$(CONFIGURATION)/include/ripplelibpp\"",
 					"\"$(SRCROOT)/src/test/ios\"",
+					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/src/test/ios/info.plist";
 				INSTALL_PATH = "";
@@ -11339,6 +11342,7 @@
 					"\"$(SRCROOT)/boost-ios/include\"",
 					"\"$(SRCROOT)/openssl-ios/include\"",
 					"\"$(SRCROOT)/extras/rippled/src/ripple/protocol\"",
+					"\"$(SRCROOT)/src/vpay365-provisioning\"",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (

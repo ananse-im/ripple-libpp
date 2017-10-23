@@ -352,6 +352,8 @@ bool exerciseVPay365Wallet()
     std::cout << "Topup request: "<<wallet.getTopupRequest("CNY",10000) << std::endl;
     std::cout << "Pushtoken request: "<<wallet.getPushTokenRequest("234233445egshdrg") << std::endl;
     std::cout << "Bitcoin generation request: "<<wallet.getBitcoinGenerationRequest() << std::endl;
+    
+    std::cout << "Trustline generation request: "<<wallet.trustLineRequest("BTC", "rJHscEPC5HmzLBu7uy1QeqGe6XDk2iaxCx", 10, 2, 300) << std::endl;
 
     return true;
 }

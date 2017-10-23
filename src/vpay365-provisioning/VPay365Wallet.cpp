@@ -7,6 +7,9 @@
 #include <ripple/protocol/Seed.h>
 #include <ripple/protocol/tokens.h>
 #include <ripple/protocol/SecretKey.h>
+#include <ripple/protocol/STAmount.h>
+#include <ripple/protocol/Sign.h>
+#include <ripple/protocol/st.h>
 #include <ripple/crypto/KeyType.h>
 #include <ripple/basics/strHex.h>
 #include <ripple/basics/Slice.h>
@@ -103,6 +106,27 @@ namespace ripple {
                 "\",\"accountholder\":\""+accountholder+"\",\"txhash\":\""+txhash+"\",\"signature\":\""+signature+"\"}";
 
 
+    }
+    
+    std::string VPay365Wallet::trustLineRequest(std::string currency, std::string issuer, int amout, int seq, unsigned int fee) {
+        STAmount amount = STAmount(fee);
+        Currency cy = to_currency(currency);
+        auto const issuerAddress = parseBase58<AccountID>(issuer);
+        Issue issuerObject = Issue(cy, issuerAddress.get());
+        STTx noopTx(ttTRUST_SET,
+                    [&](auto& obj)
+                    {
+                        // General transaction fields
+                        obj[sfAccount] = calcAccountID(keypair.first);
+                        obj[sfFee] = amount;
+                        obj[sfSequence] = seq;
+                        obj[sfSigningPubKey] = keypair.first.slice();
+                        // Payment-specific fields
+                        obj[sfLimitAmount] = STAmount(issuerObject,
+                                                      amout, 1);;
+                    });
+        noopTx.sign(keypair.first, keypair.second);
+        return noopTx.getJson(0).toStyledString();
     }
 
     std::string VPay365Wallet::getTopupRequest(std::string currency, int amount) {

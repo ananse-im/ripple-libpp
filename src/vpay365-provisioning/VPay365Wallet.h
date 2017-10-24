@@ -8,6 +8,7 @@
 #include <ripple/protocol/PublicKey.h>
 #include <ripple/protocol/SecretKey.h>
 #include <ripple/protocol/tokens.h>
+#include <ripple/protocol/STTx.h>
 
 #include <sys/time.h>
 #include <string>
@@ -21,6 +22,8 @@ namespace ripple {
         std::string address;
         std::pair<PublicKey, SecretKey> keypair;
 
+    private:
+        std::string serialize(ripple::STTx const& tx);
 
     public:
         VPay365Wallet();

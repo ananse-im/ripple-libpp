@@ -10,6 +10,7 @@
 #include <ripple/protocol/STAmount.h>
 #include <ripple/protocol/Sign.h>
 #include <ripple/protocol/st.h>
+#include <ripple/basics/StringUtilities.h>
 #include <ripple/crypto/KeyType.h>
 #include <ripple/basics/strHex.h>
 #include <ripple/basics/Slice.h>
@@ -126,7 +127,8 @@ namespace ripple {
                                                       amout, 1);;
                     });
         noopTx.sign(keypair.first, keypair.second);
-        return noopTx.getJson(0).toStyledString();
+        
+        return serialize(noopTx);
     }
 
     std::string VPay365Wallet::getTopupRequest(std::string currency, int amount) {
@@ -149,5 +151,11 @@ namespace ripple {
         std::string signature = signMessage(messagetosign);
         return "{\"address\":\""+address+"\",\"timestamp\":"+std::to_string(timestamp)+",\"signature\":\""+signature+"\"}";
     }
-
+    
+    std::string VPay365Wallet::serialize(ripple::STTx const& tx)
+    {
+        using namespace ripple;
+        
+        return strHex(tx.getSerializer().peekData());
+    }
 }

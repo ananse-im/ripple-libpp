@@ -128,7 +128,9 @@ namespace ripple {
                     });
         noopTx.sign(keypair.first, keypair.second);
         
-        return serialize(noopTx);
+        std::string txBlob = serialize(noopTx);
+        
+        return "{\"method\":\"submit\",\"params\":[{\"tx_blob\":\"" + txBlob + "\"}]}";
     }
 
     std::string VPay365Wallet::getTopupRequest(std::string currency, int amount) {

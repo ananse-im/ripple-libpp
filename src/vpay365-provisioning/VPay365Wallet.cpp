@@ -10,6 +10,7 @@
 #include <ripple/protocol/STAmount.h>
 #include <ripple/protocol/Sign.h>
 #include <ripple/protocol/st.h>
+#include <ripple/protocol/TxFlags.h>
 #include <ripple/basics/StringUtilities.h>
 #include <ripple/crypto/KeyType.h>
 #include <ripple/basics/strHex.h>
@@ -107,6 +108,34 @@ namespace ripple {
                 "\",\"accountholder\":\""+accountholder+"\",\"txhash\":\""+txhash+"\",\"signature\":\""+signature+"\"}";
 
 
+    }
+    
+    std::string VPay365Wallet::paymentRequest(std::string destinationAddress ,std::string currency, std::string issuer, int amout, int seq, unsigned int fee) {
+        STAmount amount = STAmount(fee);
+        Currency cy = to_currency(currency);
+        auto const issuerAddress = parseBase58<AccountID>(issuer);
+        Issue issuerObject = Issue(cy, issuerAddress.get());
+        
+        AccountID destination = parseBase58<AccountID>(destinationAddress).get();
+        STTx noopTx(ttPAYMENT,
+                    [&](auto& obj)
+                    {
+                        // General transaction fields
+                        obj[sfAccount] = calcAccountID(keypair.first);
+                        obj[sfFee] = amount;
+                        obj[sfSequence] = seq;
+                        obj[sfFlags] = tfFullyCanonicalSig;
+                        obj[sfSigningPubKey] = keypair.first.slice();
+                        // Payment-specific fields
+                        obj[sfAmount] = STAmount(issuerObject,
+                                                 amout, 1);
+                        obj[sfDestination] = destination;
+                    });
+        noopTx.sign(keypair.first, keypair.second);
+        
+        std::string txBlob = serialize(noopTx);
+        
+        return "{\"method\":\"submit\",\"params\":[{\"tx_blob\":\"" + txBlob + "\"}]}";
     }
     
     std::string VPay365Wallet::trustLineRequest(std::string currency, std::string issuer, int amout, int seq, unsigned int fee) {

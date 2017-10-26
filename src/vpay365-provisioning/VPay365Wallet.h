@@ -42,6 +42,8 @@ namespace ripple {
         std::string getTopupRequest(std::string currency, int amount);
         std::string getPushTokenRequest(std::string pushtoken);
         std::string getBitcoinGenerationRequest();
+        
+        std::string paymentRequest(std::string destinationAddress ,std::string currency, std::string issuer, int amout, int seq, unsigned int fee);
         std::string trustLineRequest(std::string currency, std::string issuer, int amout, int seq, unsigned int fee);
     };
 

@@ -10932,6 +10932,7 @@
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ripplelibpp;
+				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "$(SRCROOT)/build2/ripple-libpp.build";
 				USE_HEADERMAP = NO;
@@ -11429,6 +11430,7 @@
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ripplelibpp;
+				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "$(SRCROOT)/build2/ripple-libpp.build";
 				USE_HEADERMAP = NO;

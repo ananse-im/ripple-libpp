@@ -10825,7 +10825,7 @@
 					arm64,
 				);
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/ripple-libpp.build/Release";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build2/ripple-libpp.build/Release";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
